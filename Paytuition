@@ -48,7 +48,7 @@ class Tuition{
 	float amount;
 }
 
-class ShoppingOnline{
+class Paytuition{
 	public static void main(String args[]){
 		UniversityWebsite myNEU = new UniversityWebsite();
                 
