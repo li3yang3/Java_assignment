@@ -23,7 +23,7 @@ class Student{
 	Integer studentID;
 	void visitWebsite(UniversityWebsite uw){}
 	Bill findCurrentBill(Bill bills[]){}
-	Money payTuitionToWebsite(UniversityWebsite uw){}
+	Tuition payTuitionToWebsite(UniversityWebsite uw){}
 	
 }
 
