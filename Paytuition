@@ -8,7 +8,7 @@ Objects (with Behaviors and State):
 	
 	
 	Object : UniversityWebsite
-		State : Collection of Bill
+		State : Collection of Bills
 		Behavior : displayBillsInfo(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
 	
 	Object : Bill
