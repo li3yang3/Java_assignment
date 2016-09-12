@@ -3,69 +3,75 @@ Description : A student wants to pay his tuition through myNEU account.
 
 Objects (with Behaviors and State): 
 	Object : Student
-		State : name, student_ID, password
-		Behavior : visitWebsite(), loginToAccount(), checkBillInfo(), payTuitionToWebsite()
+		State : name, studentID
+		Behavior : visitWebsite(), findCurrentBill(), payTuitionToWebsite()
 	
 	
 	Object : UniversityWebsite
 		State : Collection of Bill
-		Behavior : displayCurrentBill(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
+		Behavior : displayBillsInfo(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
 	
 	Object : Bill
 		State : name, price, credit
 		Behavior : getPrice(), getCredit()
 	
-	Object : Money
+	Object : Tuition
 		state : amount	
 
 class Student{
 	String name;
-	Int student_ID;
-	String password;
+	Integer studentID;
 	void visitWebsite(UniversityWebsite uw){}
-	void loginToAccount(){}
-	Bill CheckBillInfo(Bill bills[]){}
+	Bill findCurrentBill(Bill bills[]){}
 	Money payTuitionToWebsite(UniversityWebsite uw){}
 	
 }
 
 class UniversityWebsite{
 	Bill[] bills; 
-	Bill[] displayCurrentBill(){}
-	void shipABookToConsumer(Consumer c, Book b){}
-	void acceptMoneyFromConsumer(Consumer c, Money money){}
+	Bill displayBillsInfo(){}
+	void acceptPaymentFromStudent(Student s, Tuition t){}
+	void sendConfirmationToStudent(Student s){}
 			
 }
 
-class Book{
-	String name, author;
+class Bill{
+	String name;
 	Float price;
+	Integer credit
 	Float getPrice(){}
 	String getName(){}
 
 }
 
-class Money{
+class Tuition{
 	float amount;
 }
 
 class ShoppingOnline{
 	public static void main(String args[]){
-		ShoppingWebsite amazon = new ShoppingWebsite();
-
-		Book headFirstJava = new Book();headFirstJava.name = "Head First Java";
-		Book thinkingJava = new Book();thinkingJava = "Thinking In Java";
-		Book[] books = {headFirstJava, thinkingJava};
-
-		Consumer michael = new Consumer();
-		michael.name = "Michael";
+		UniversityWebsite myNEU = new UniversityWebsite();
+                
+                Bill newFallTerm = new Bill();
+                bill.name = "newFallTerm";
+                bill.price = 13383;
+                Bill PrevSpringTerm = new Bill();
+                bill.name = "PrevSpringTerm";
+                bill.price = 11583;
+                Bill[] bills = {newFallTerm, PrevSpringTerm};
 		
-		michael.visitsWebsite(amazon);
-		Book[] books = amazon.displayAvailableBooks();
-		Book book = michael.findTheBookInterestedIn( books , amazon);
-		michael.placeOrderForBook(book, amazon)
-		Money money = michael.payMoneyToWebsite(amazon);
-		amazon.acceptMoneyFromConsumer(michael, money);
+
+		Student rick = new Student();
+		rick.name = "rick";
+		rick.stduentID = "001253037";
+		
+		rick.visitsWebsite(myNEU);
+		Bill[] bills = myNEU.displayBillsInfo();
+		Bill bill = rick.findCurrentBill(bills);
+		
+		Tuiton tuition = rick.payTuitionToWebsite(myNEU);
+		myNEU.acceptPaymentFromStudent(rick, tuition);
+		myNEU.sendConfirmationToStudent(rick);
 	}
 
 }
