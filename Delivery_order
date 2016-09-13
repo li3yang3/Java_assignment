@@ -53,7 +53,7 @@ class Money{
 	float amount;
 }
 
-class Paytuition{
+class DeliveryOrder{
 	public static void main(String args[]){
 		Shop ikea = new Shop();
                 
