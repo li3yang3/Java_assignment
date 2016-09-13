@@ -5,76 +5,81 @@ Description : A consumer is going to order a delivery through phone calls.
 
 
 Objects (with Behaviors and State): 
-	Object : customer
+	Object : Customer
 		State : name, address
-		Behavior : makePhoneCall(), placeDeliveryOrder(), payTheOrder()
+		Behavior : makePhoneCall(), addItem(), placeDeliveryOrder(), payTheOrder()
 	
 	
-	Object : UniversityWebsite
-		State : Collection of Bills
-		Behavior : displayBillsInfo(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
+	Object : Shop
+		State : Collection of Items, phoneNumber
+		Behavior : deliverOrderToCustomer(), acceptPaymentFromCustomer()
 	
-	Object : Bill
-		State : name, price, credit
-		Behavior : getPrice(), getCredit()
+	Object : Item
+		State : name, price, quantity
+		Behavior : getName(), getPrice(), getQuantity()
 	
-	Object : Tuition
+	Object : Money
 		state : amount	
 
-class Student{
+class Customer{
 	String name;
-	Integer studentID;
-	void visitWebsite(UniversityWebsite uw){}
-	Bill findCurrentBill(Bill bills[]){}
-	Tuition payTuitionToWebsite(UniversityWebsite uw){}
+	String address;
+	void makePhoneCall(Shop sh){}
+	Item addItem(Item items[]){}
+	void placeDeliveryOrder(Item item){}
+	Money payTheOrder(Shop sh){}
 	
 }
 
-class UniversityWebsite{
-	Bill[] bills; 
-	Bill displayBillsInfo(){}
-	void acceptPaymentFromStudent(Student s, Tuition t){}
-	void sendConfirmationToStudent(Student s){}
+class Shop{
+        Integer phoneNumber;
+	Item[] items; 
+	void deliverOrderToCustomer(Customer c, Item i){}
+	Money acceptPaymentFromCustomer(Customer c, Money m){}
 			
 }
 
-class Bill{
+class Item{
 	String name;
 	Integer price;
-	Integer credit;
-	Float getPrice(){}
+	Integer quantity;
+	Integer getPrice(){}
+	Integer getQuantity(){}
 	String getName(){}
 
 }
 
-class Tuition{
+class Money{
 	float amount;
 }
 
 class Paytuition{
 	public static void main(String args[]){
-		UniversityWebsite myNEU = new UniversityWebsite();
+		Shop ikea = new Shop();
                 
-                Bill newFallTerm = new Bill();
-                bill.name = "newFallTerm";
-                bill.price = 13383;
-                Bill PrevSpringTerm = new Bill();
-                bill.name = "PrevSpringTerm";
-                bill.price = 11583;
-                Bill[] bills = {newFallTerm, PrevSpringTerm};
+                Item chair = new Item();
+                chair.name = "president";
+                chair.price = 39.99;
+                chair.quantity = 2;
+                Item bed = new Item();
+                bed.name = "comfortable";
+                bed.price = 105.55;
+                bed.quantity = 1;
+                Item[] items = {chair, bed};
 		
 
-		Student rick = new Student();
-		rick.name = "rick";
-		rick.stduentID = "001253037";
+		Customer lisa = new Customer();
+		lisa.name = "lisa";
+		lisa.address = "600 Galer Street Unit 210";
 		
-		rick.visitsWebsite(myNEU);
-		Bill[] bills = myNEU.displayBillsInfo();
-		Bill bill = rick.findCurrentBill(bills);
+		lisa.makePhoneCall(ikea);
+		Item item = lisa.addItem(items);
+		lisa.placeDeliveryOrder(item);
 		
-		Tuiton tuition = rick.payTuitionToWebsite(myNEU);
-		myNEU.acceptPaymentFromStudent(rick, tuition);
-		myNEU.sendConfirmationToStudent(rick);
+		ikea.deliverOrderToCustomer(lisa,item);
+		Money money = lisa.payTheOrder(ikea);
+		ikea.acceptPaymentFromCustomer(lisa,money);
+		
 	}
 
 }
