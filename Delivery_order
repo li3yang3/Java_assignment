@@ -1,0 +1,80 @@
+
+Scenario : Order for delivery
+
+Description : A consumer is going to order a delivery through phone calls.
+
+
+Objects (with Behaviors and State): 
+	Object : customer
+		State : name, address
+		Behavior : makePhoneCall(), placeDeliveryOrder(), payTheOrder()
+	
+	
+	Object : UniversityWebsite
+		State : Collection of Bills
+		Behavior : displayBillsInfo(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
+	
+	Object : Bill
+		State : name, price, credit
+		Behavior : getPrice(), getCredit()
+	
+	Object : Tuition
+		state : amount	
+
+class Student{
+	String name;
+	Integer studentID;
+	void visitWebsite(UniversityWebsite uw){}
+	Bill findCurrentBill(Bill bills[]){}
+	Tuition payTuitionToWebsite(UniversityWebsite uw){}
+	
+}
+
+class UniversityWebsite{
+	Bill[] bills; 
+	Bill displayBillsInfo(){}
+	void acceptPaymentFromStudent(Student s, Tuition t){}
+	void sendConfirmationToStudent(Student s){}
+			
+}
+
+class Bill{
+	String name;
+	Integer price;
+	Integer credit;
+	Float getPrice(){}
+	String getName(){}
+
+}
+
+class Tuition{
+	float amount;
+}
+
+class Paytuition{
+	public static void main(String args[]){
+		UniversityWebsite myNEU = new UniversityWebsite();
+                
+                Bill newFallTerm = new Bill();
+                bill.name = "newFallTerm";
+                bill.price = 13383;
+                Bill PrevSpringTerm = new Bill();
+                bill.name = "PrevSpringTerm";
+                bill.price = 11583;
+                Bill[] bills = {newFallTerm, PrevSpringTerm};
+		
+
+		Student rick = new Student();
+		rick.name = "rick";
+		rick.stduentID = "001253037";
+		
+		rick.visitsWebsite(myNEU);
+		Bill[] bills = myNEU.displayBillsInfo();
+		Bill bill = rick.findCurrentBill(bills);
+		
+		Tuiton tuition = rick.payTuitionToWebsite(myNEU);
+		myNEU.acceptPaymentFromStudent(rick, tuition);
+		myNEU.sendConfirmationToStudent(rick);
+	}
+
+}
