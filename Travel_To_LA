@@ -1,0 +1,50 @@
+Scenario : Travelling to LA
+
+Description : A tourist is trying to find the cheapest flight to LA.
+
+Objects (with Behaviors and State): 
+	  Object : traveller
+		State : name, accountID
+		Behavior : visitWebsite(), rankTheTicketByPrice(),findAFlight(), bookAFlight(), payTheTicket()
+	
+	
+	  Object : travelwebsite
+		State : Collection of Airplane tickets
+		Behavior : displayTickets(),  acceptPaymentFromTraveller(), sendTicketToTraveller()
+	
+	  Object : ticket
+		State : FlightNumber, price, origin, destination
+		Behavior : getFlightNumber(), getPrice(), getOrigin(), getDestination()
+	
+	  Object : Money
+		state : amount	
+		
+		
+Class Traveller {
+      String Name;
+      Integer accountID;
+      void visitWebsite(travelwebsite tw){}
+      void rankTheTicketByPrice(){}
+      Ticket findAFlight(Ticket ticket[]){}
+      void bookAFlight(Ticket ticket){}
+      Money payTheTicket(travelwebsite tw){};
+      
+}
+
+Class Travelwebsite{
+      Ticket[] tickets;
+      Ticket displayTickets(){}
+      void acceptPaymentFromTraveller(Traveller t, Money m){}
+      void sendTicketToTraveller(Traveller t){}
+
+}
+
+Class Ticket{
+
+}
+
+Class Money{
+
+}
+
+
