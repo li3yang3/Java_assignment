@@ -1,3 +1,50 @@
 Scenario : Drive home
 
 Description : A student is driving home from school.
+
+Objects (with Behaviors and State): 
+	Object : Driver
+		State : name
+		Behavior : openGPS(), findBooks(), placeOrderForBook(), payMoneyToWebsite()
+	
+	
+	Object : GPS
+		State : Collection of Addresses
+		Behavior : displayAMap(), shipABookToConsumer(), acceptMoneyFromConsumer()
+	
+	Object : Home
+		State : name, price, author
+		Behavior : getPrice(), getName()
+	
+	Object : Money
+		state : amount	
+
+class Consumer{
+	String name;
+	String address;
+	void visitWebsite(ShoppingWebsite sw){}
+	Book findTheBookInterestedIn(Book books[]){}
+	void placeOrderForBook(Book book){}
+	Money payMoneyToWebsite(ShoppingWebsite sw){}
+	
+}
+
+class ShoppingWebsite{
+	Book[] books; //Array of Book
+	Book[] displayAvailableBooks(){}
+	void shipABookToConsumer(Consumer c, Book b){}
+	void acceptMoneyFromConsumer(Consumer c, Money money){}
+			
+}
+
+class Book{
+	String name, author;
+	Float price;
+	Float getPrice(){}
+	String getName(){}
+
+}
+
+class Money{
+	float amount;
+}
