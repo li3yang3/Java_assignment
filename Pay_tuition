@@ -44,7 +44,7 @@ class Bill{
 }
 
 class Tuition{
-	float amount;
+	Float amount;
 }
 
 class Paytuition{
