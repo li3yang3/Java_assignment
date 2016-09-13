@@ -62,8 +62,20 @@ class BookAirbnb{
 	House mountainview = new House();
 	mountainview.name = "mountainview";
 	mountainview.price = 270.0;
+	House[] houses = {harbourview,mountainview};
 	
+	Customer allen = new Customer();
+	allen.name = "allen";
+	allen.accountID = "allengo";
 	
+	allen.visitApp(airbnb);
+	House[] houses = airbnb.displayHouses();
+	House house = allen.searchAHouse(houses);
+	allen.orderAHouse(house);
+	Money money = allen.payRoomCharge(airbnb);
+	airbnb.acceptPaymentFromTourist(allen,money);
+	airbnb.sendConfirmationToTourist(allen);
+
 	}
 
 }
