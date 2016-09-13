@@ -38,7 +38,7 @@ class UniversityWebsite{
 class Bill{
 	String name;
 	Integer price;
-	Integer credit
+	Integer credit;
 	Float getPrice(){}
 	String getName(){}
 
