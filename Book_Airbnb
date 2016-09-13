@@ -4,23 +4,23 @@ Description : A tourist wants to book a house on Airbnb app.
 
 
 Objects (with Behaviors and State): 
-	Object : Student
-		State : name, studentID
-		Behavior : visitWebsite(), findCurrentBill(), payTuitionToWebsite()
+	Object : Tourist
+		State : name, accountID
+		Behavior : visitApp(), searchAHouse(), orderAHouse, payRoomCharge()
 	
 	
-	Object : UniversityWebsite
-		State : Collection of Bills
-		Behavior : displayBillsInfo(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
+	Object : tourapp
+		State : Collection of Available Houses
+		Behavior : displayHouses(),  acceptPaymentFromTourist(), sendConfirmationToTourist()
 	
-	Object : Bill
-		State : name, price, credit
-		Behavior : getPrice(), getCredit()
+	Object : House
+		State : name, price
+		Behavior : getPrice(), getName()
 	
-	Object : Tuition
+	Object : Money
 		state : amount	
 
-class Student{
+class Tourist{
 	String name;
 	Integer studentID;
 	void visitWebsite(UniversityWebsite uw){}
@@ -29,7 +29,7 @@ class Student{
 	
 }
 
-class UniversityWebsite{
+class Tourapp{
 	Bill[] bills; 
 	Bill displayBillsInfo(){}
 	void acceptPaymentFromStudent(Student s, Tuition t){}
@@ -37,7 +37,7 @@ class UniversityWebsite{
 			
 }
 
-class Bill{
+class House{
 	String name;
 	Float price;
 	Float getPrice(){}
@@ -45,7 +45,7 @@ class Bill{
 
 }
 
-class Tuition{
+class Money{
 	float amount;
 }
 
