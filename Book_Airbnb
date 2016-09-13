@@ -49,7 +49,7 @@ class House{
 }
 
 class Money{
-	float amount;
+	Float amount;
 }
 
 class BookAirbnb{
