@@ -15,7 +15,7 @@ Objects (with Behaviors and State):
 	
 	Object : House
 		State : name, price
-		Behavior : getPrice(), getName()
+		Behavior : getName(), getPrice() 
 	
 	Object : Money
 		state : amount	
