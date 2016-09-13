@@ -37,7 +37,7 @@ class UniversityWebsite{
 
 class Bill{
 	String name;
-	Integer price;
+	Float price;
 	Integer credit;
 	Float getPrice(){}
 	String getName(){}
@@ -54,10 +54,10 @@ class Paytuition{
                 
                 Bill newFallTerm = new Bill();
                 bill.name = "newFallTerm";
-                bill.price = 13383;
+                bill.price = 13383.0;
                 Bill PrevSpringTerm = new Bill();
                 bill.name = "PrevSpringTerm";
-                bill.price = 11583;
+                bill.price = 11583.0;
                 Bill[] bills = {newFallTerm, PrevSpringTerm};
 		
 
