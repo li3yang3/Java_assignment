@@ -6,7 +6,7 @@ Description : A tourist wants to book a house on Airbnb app.
 Objects (with Behaviors and State): 
 	Object : Tourist
 		State : name, accountID
-		Behavior : visitApp(), searchAHouse(), orderAHouse, payRoomCharge()
+		Behavior : visitApp(), searchAHouse(), orderAHouse(), payRoomCharge()
 	
 	
 	Object : tourapp
@@ -22,26 +22,29 @@ Objects (with Behaviors and State):
 
 class Tourist{
 	String name;
-	Integer studentID;
-	void visitWebsite(UniversityWebsite uw){}
-	Bill findCurrentBill(Bill bills[]){}
-	Tuition payTuitionToWebsite(UniversityWebsite uw){}
+	Integer accountID;
+	void visitApp(tourapp ta){}
+	House searchAHouse(House houses[]){}
+	void orderAHouse(House house){}
+	Money payRoomCharge(tourapp ta){}
+	
 	
 }
 
 class Tourapp{
-	Bill[] bills; 
-	Bill displayBillsInfo(){}
-	void acceptPaymentFromStudent(Student s, Tuition t){}
-	void sendConfirmationToStudent(Student s){}
+        House[] houses;
+        House displayHouses(){}
+	void acceptPaymentFromTourist(Tourist t, Money m){}
+	void sendConfirmationToTourist(Tourist t){}
 			
 }
 
 class House{
 	String name;
 	Float price;
-	Float getPrice(){}
 	String getName(){}
+	Float getPrice(){}
+	
 
 }
 
@@ -51,6 +54,15 @@ class Money{
 
 class BookAirbnb{
 	public static void main(String args[]){
+	Tourapp airbnb = new Tourapp();
+	
+	House harbourview = new House();
+	harbourview.name = "harbourview";
+	harbourview.price = 320.0;
+	House mountainview = new House();
+	mountainview.name = "mountainview";
+	mountainview.price = 270.0;
+	
 	
 	}
 
