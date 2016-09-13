@@ -5,46 +5,62 @@ Description : A student is driving home from school.
 Objects (with Behaviors and State): 
 	Object : Driver
 		State : name
-		Behavior : openGPS(), findBooks(), placeOrderForBook(), payMoneyToWebsite()
+		Behavior : openGPS(), findHome(), startNavigation(), drive()
 	
 	
 	Object : GPS
-		State : Collection of Addresses
-		Behavior : displayAMap(), shipABookToConsumer(), acceptMoneyFromConsumer()
+		State : Collection of Locations
+		Behavior : displayAMap(), NavigateToHome(), EndNavigation()
 	
-	Object : Home
-		State : name, price, author
-		Behavior : getPrice(), getName()
+	Object : Location
+		State : address
+		Behavior : getAddress()
 	
-	Object : Money
-		state : amount	
 
-class Consumer{
+
+class Driver {
 	String name;
-	String address;
-	void visitWebsite(ShoppingWebsite sw){}
-	Book findTheBookInterestedIn(Book books[]){}
-	void placeOrderForBook(Book book){}
-	Money payMoneyToWebsite(ShoppingWebsite sw){}
+	void openGPS(GPS g){}
+	Location findHome(Location locations[]){}
+	void startNavigation(Location l){}
+	void drive(){}
 	
 }
 
-class ShoppingWebsite{
-	Book[] books; //Array of Book
-	Book[] displayAvailableBooks(){}
-	void shipABookToConsumer(Consumer c, Book b){}
-	void acceptMoneyFromConsumer(Consumer c, Money money){}
+class GPS {
+	Location[] locations; //Array of Book
+	Location[] displayAMap(){}
+	void NavigateToHome(Location l){}
+	void EndNavigation(){}
 			
 }
 
-class Book{
-	String name, author;
-	Float price;
-	Float getPrice(){}
-	String getName(){}
+class Location {
+	String address;
+	String getAddress(){}
 
 }
 
-class Money{
-	float amount;
+class DriveHome {
+      public static void main(String args[]) {
+      GPS googlemap = New GPS();
+      
+      Location company = new Location();
+      company.address = "1100 Dexter Street";
+      Location home = new Location();
+      home.address = " 610 Galer Street";
+      Location[] locations = {company,home};
+      
+      Driver harvey = new Driver();
+      harvey.name = "harvey";
+      
+      harvey.openGPS(googlemap);
+      Location[] locations = googlemap.displayAMap();
+      Location l = harvey.findHome(locations);
+      harvey.startNavigation(l);
+      googlemap.NavigateToHome(l);
+      harvey.drive();
+      googlemap.EndNavigation();
+      
+   }
 }
