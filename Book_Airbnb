@@ -1,0 +1,57 @@
+Scenario : Booking an Airbnb
+
+Description : A tourist wants to book a house on Airbnb app.
+
+
+Objects (with Behaviors and State): 
+	Object : Student
+		State : name, studentID
+		Behavior : visitWebsite(), findCurrentBill(), payTuitionToWebsite()
+	
+	
+	Object : UniversityWebsite
+		State : Collection of Bills
+		Behavior : displayBillsInfo(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
+	
+	Object : Bill
+		State : name, price, credit
+		Behavior : getPrice(), getCredit()
+	
+	Object : Tuition
+		state : amount	
+
+class Student{
+	String name;
+	Integer studentID;
+	void visitWebsite(UniversityWebsite uw){}
+	Bill findCurrentBill(Bill bills[]){}
+	Tuition payTuitionToWebsite(UniversityWebsite uw){}
+	
+}
+
+class UniversityWebsite{
+	Bill[] bills; 
+	Bill displayBillsInfo(){}
+	void acceptPaymentFromStudent(Student s, Tuition t){}
+	void sendConfirmationToStudent(Student s){}
+			
+}
+
+class Bill{
+	String name;
+	Float price;
+	Float getPrice(){}
+	String getName(){}
+
+}
+
+class Tuition{
+	float amount;
+}
+
+class BookAirbnb{
+	public static void main(String args[]){
+	
+	}
+
+}
