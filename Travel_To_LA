@@ -13,8 +13,8 @@ Objects (with Behaviors and State):
 		Behavior : displayTickets(),  acceptPaymentFromTraveller(), sendTicketToTraveller()
 	
 	  Object : ticket
-		State : FlightNumber, price, origin, destination
-		Behavior : getFlightNumber(), getPrice(), getOrigin(), getDestination()
+		State : flightNumber, price
+		Behavior : getFlightNumber(), getPrice()
 	
 	  Object : Money
 		state : amount	
@@ -24,7 +24,7 @@ Class Traveller {
       String Name;
       Integer accountID;
       void visitWebsite(travelwebsite tw){}
-      void rankTheTicketByPrice(){}
+      void rankTheTicketByPrice(Ticket ticket[]){}
       Ticket findAFlight(Ticket ticket[]){}
       void bookAFlight(Ticket ticket){}
       Money payTheTicket(travelwebsite tw){};
@@ -40,10 +40,45 @@ Class Travelwebsite{
 }
 
 Class Ticket{
+      Integer flightNumber;
+      Float price;
+      IntegergetFlightNumber(){}
+      Float getPrice(){} 
+      
 
 }
 
 Class Money{
+      Float amount;
+
+}
+
+class TraveltoLA{
+	public static void main(String args[]){
+	Travelwebsite expedia = new Travelwebsite();
+	
+	Ticket alaska = new Ticket();
+	alaska.flightNumber = "AS3412";
+	alaska.price = 365.0;
+	Ticket delta = new House();
+	delta.flightNumber = "DL581";
+        delta.price = 295.0;
+	House[] houses = {alaska,delta};
+	
+	Traveller frank = new Traveller();
+	frank.name = "frank";
+	frank.accountID = "frank_Sea";
+	
+	frank.visitWebsite(expedia);
+	Ticket[] tickets = expedia.displayTickets();
+	frank.rankTheTicketByPrice(tickets);
+	Ticket ticket = frank.findAFlight(tickets);
+	frank.bookAFlight(ticket);
+	Money money = frank.payTheTicket(expedia);
+	expedia.acceptPaymentFromTraveller(frank, money);
+	expedia.sendTicketToTraveller(frank);
+
+	}
 
 }
 
