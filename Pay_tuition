@@ -63,7 +63,7 @@ class Paytuition{
 
 		Student rick = new Student();
 		rick.name = "rick";
-		rick.stduentID = "001253037";
+		rick.stduentID = 001253037;
 		
 		rick.visitsWebsite(myNEU);
 		Bill[] bills = myNEU.displayBillsInfo();
