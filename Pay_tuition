@@ -14,7 +14,7 @@ Objects (with Behaviors and State):
 	
 	Object : Bill
 		State : name, price, credit
-		Behavior : getPrice(), getCredit()
+		Behavior : getName(), getPrice(), getCredit()
 	
 	Object : Tuition
 		state : amount	
