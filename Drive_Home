@@ -9,7 +9,7 @@ NEUID:001253037
 Objects (with Behaviors and State): 
 	Object : Driver
 		State : name
-		Behavior : openGPS(), findHome(), startNavigation(), drive()
+		Behavior : openCarGPS(), findHome(), startNavigation(), driveCar()
 	
 	
 	Object : GPS
@@ -24,10 +24,10 @@ Objects (with Behaviors and State):
 
 class Driver {
 	String name;
-	void openGPS(GPS g){}
+	void openCarGPS(GPS g){}
 	Location findHome(Location locations[]){}
 	void startNavigation(Location l){}
-	void drive(){}
+	void driveCar(){}
 	
 }
 
@@ -49,21 +49,21 @@ class DriveHome {
       public static void main(String args[]) {
       GPS googlemap = New GPS();
       
-      Location company = new Location();
-      company.address = "1100 Dexter Street";
+      Location school = new Location();
+      school.address = "1100 Dexter Street";
       Location home = new Location();
       home.address = " 610 Galer Street";
-      Location[] locations = {company,home};
+      Location[] locations = {school,home};
       
       Driver harvey = new Driver();
       harvey.name = "harvey";
       
-      harvey.openGPS(googlemap);
+      harvey.openCarGPS(googlemap);
       Location[] locations = googlemap.displayAMap();
       Location l = harvey.findHome(locations);
       harvey.startNavigation(l);
       googlemap.NavigateToHome(l);
-      harvey.drive();
+      harvey.driveCar();
       googlemap.EndNavigation();
       
    }
