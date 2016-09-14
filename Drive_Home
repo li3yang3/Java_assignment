@@ -1,3 +1,4 @@
+/*
 Scenario : Drive home
 
 Description : A student is driving home from school.
@@ -15,7 +16,7 @@ Objects (with Behaviors and State):
 	Object : Location
 		State : address
 		Behavior : getAddress()
-	
+*/	
 
 
 class Driver {
