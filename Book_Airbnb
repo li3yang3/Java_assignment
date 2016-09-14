@@ -1,7 +1,10 @@
+/*
 Scenario : Booking an Airbnb
 
 Description : A tourist wants to book a house on Airbnb app.
 
+Author:Yang Li
+NEUID:001253037
 
 Objects (with Behaviors and State): 
 	Object : Tourist
@@ -19,6 +22,7 @@ Objects (with Behaviors and State):
 	
 	Object : Money
 		state : amount	
+*/
 
 class Tourist{
 	String name;
