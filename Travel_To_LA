@@ -1,3 +1,4 @@
+/* 
 Scenario : Travelling to LA
 
 Description : A tourist is trying to find the cheapest flight to LA.
@@ -5,7 +6,7 @@ Description : A tourist is trying to find the cheapest flight to LA.
 Objects (with Behaviors and State): 
 	  Object : traveller
 		State : name, accountID
-		Behavior : visitWebsite(), rankTheTicketByPrice(),findAFlight(), bookAFlight(), payTheTicket()
+		Behavior : visitWebsite(), rankTheTicketByPrice(),findAFlight(), bookCheapestFlight(), payTheTicket()
 	
 	
 	  Object : travelwebsite
@@ -18,7 +19,7 @@ Objects (with Behaviors and State):
 	
 	  Object : Money
 		state : amount	
-		
+*/		
 		
 Class Traveller {
       String Name;
@@ -26,7 +27,7 @@ Class Traveller {
       void visitWebsite(travelwebsite tw){}
       void rankTheTicketByPrice(Ticket ticket[]){}
       Ticket findAFlight(Ticket ticket[]){}
-      void bookAFlight(Ticket ticket){}
+      void  bookCheapestFlight(Ticket ticket){}
       Money payTheTicket(travelwebsite tw){};
       
 }
@@ -73,7 +74,7 @@ class TraveltoLA{
 	Ticket[] tickets = expedia.displayTickets();
 	frank.rankTheTicketByPrice(tickets);
 	Ticket ticket = frank.findAFlight(tickets);
-	frank.bookAFlight(ticket);
+	frank. bookCheapestFlight(ticket);
 	Money money = frank.payTheTicket(expedia);
 	expedia.acceptPaymentFromTraveller(frank, money);
 	expedia.sendTicketToTraveller(frank);
