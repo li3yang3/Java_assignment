@@ -1,6 +1,10 @@
+/*
 Scenario : Pay tuition
 
 Description : A student wants to pay his tuition through myNEU account.
+
+Author:Yang Li
+NEUID:001253037
 
 Objects (with Behaviors and State): 
 	Object : Student
@@ -18,7 +22,7 @@ Objects (with Behaviors and State):
 	
 	Object : Tuition
 		state : amount	
-
+*/
 class Student{
 	String name;
 	Integer studentID;
