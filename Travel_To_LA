@@ -8,7 +8,7 @@ NEUID:001253037
 
 Objects (with Behaviors and State): 
 	  Object : traveller
-		State : name, accountID
+		State : name, accountID, address
 		Behavior : visitWebsite(), rankTheTicketByPrice(),findCheapestFlight(), bookCheapestFlight(), payTheTicket()
 	
 	
@@ -27,6 +27,7 @@ Objects (with Behaviors and State):
 Class Traveller {
       String Name;
       Integer accountID;
+      String address;
       void visitWebsite(travelwebsite tw){}
       void rankTheTicketByPrice(Ticket tickets[]){}
       Ticket findCheapestFlight(Ticket tickets[]){}
@@ -44,9 +45,9 @@ Class Travelwebsite{
 }
 
 Class Ticket{
-      Integer flightNumber;
+      String flightNumber;
       Float price;
-      Integer getFlightNumber(){}
+      String getFlightNumber(){}
       Float getPrice(){} 
       
 
@@ -72,6 +73,7 @@ class TraveltoLA{
 	Traveller frank = new Traveller();
 	frank.name = "frank";
 	frank.accountID = "frank_Sea";
+	frank.address = "Seattle";
 	
 	frank.visitWebsite(expedia);
 	Ticket[] tickets = expedia.displayTickets();
