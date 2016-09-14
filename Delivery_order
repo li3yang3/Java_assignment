@@ -79,12 +79,13 @@ class DeliveryOrder{
 		
 		lisa.makePhoneCall(ikea);
 		ikea.recevieTheCall(lisa);
+		
 		Item item = lisa.addItem(items);
 		lisa.placeDeliveryOrder(item);
-		
-		ikea.deliverOrderToCustomer(lisa,item);
 		Money money = lisa.payTheOrder(ikea);
 		ikea.acceptPaymentFromCustomer(lisa,money);
+		ikea.deliverOrderToCustomer(lisa,item);
+		
 		
 	}
 
