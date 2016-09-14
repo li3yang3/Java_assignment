@@ -3,6 +3,9 @@ Scenario : Drive home
 
 Description : A student is driving home from school.
 
+Author:Yang Li
+NEUID:001253037
+
 Objects (with Behaviors and State): 
 	Object : Driver
 		State : name
