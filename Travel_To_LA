@@ -28,8 +28,8 @@ Class Traveller {
       String Name;
       Integer accountID;
       void visitWebsite(travelwebsite tw){}
-      void rankTheTicketByPrice(Ticket[] tickets){}
-      Ticket findCheapestFlight(Ticket[] tickets){}
+      void rankTheTicketByPrice(Ticket tickets[]){}
+      Ticket findCheapestFlight(Ticket tickets[]){}
       void  bookCheapestFlight(Ticket ticket){}
       Money payTheTicket(ticket){};
       
