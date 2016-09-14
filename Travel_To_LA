@@ -9,7 +9,7 @@ NEUID:001253037
 Objects (with Behaviors and State): 
 	  Object : traveller
 		State : name, accountID
-		Behavior : visitWebsite(), rankTheTicketByPrice(),findAFlight(), bookCheapestFlight(), payTheTicket()
+		Behavior : visitWebsite(), rankTheTicketByPrice(),findCheapestFlight(), bookCheapestFlight(), payTheTicket()
 	
 	
 	  Object : travelwebsite
@@ -29,7 +29,7 @@ Class Traveller {
       Integer accountID;
       void visitWebsite(travelwebsite tw){}
       void rankTheTicketByPrice(Ticket ticket[]){}
-      Ticket findAFlight(Ticket ticket[]){}
+      Ticket findCheapestFlight(Ticket ticket[]){}
       void  bookCheapestFlight(Ticket ticket){}
       Money payTheTicket(travelwebsite tw){};
       
@@ -76,7 +76,7 @@ class TraveltoLA{
 	frank.visitWebsite(expedia);
 	Ticket[] tickets = expedia.displayTickets();
 	frank.rankTheTicketByPrice(tickets);
-	Ticket ticket = frank.findAFlight(tickets);
+	Ticket ticket = frank.findCheapestFlight(tickets);
 	frank. bookCheapestFlight(ticket);
 	Money money = frank.payTheTicket(expedia);
 	expedia.acceptPaymentFromTraveller(frank, money);
