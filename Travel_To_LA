@@ -28,10 +28,10 @@ Class Traveller {
       String Name;
       Integer accountID;
       void visitWebsite(travelwebsite tw){}
-      void rankTheTicketByPrice(Ticket ticket[]){}
-      Ticket findCheapestFlight(Ticket ticket[]){}
+      void rankTheTicketByPrice(Ticket[] tickets){}
+      Ticket findCheapestFlight(Ticket[] tickets){}
       void  bookCheapestFlight(Ticket ticket){}
-      Money payTheTicket(travelwebsite tw){};
+      Money payTheTicket(ticket){};
       
 }
 
@@ -77,8 +77,8 @@ class TraveltoLA{
 	Ticket[] tickets = expedia.displayTickets();
 	frank.rankTheTicketByPrice(tickets);
 	Ticket ticket = frank.findCheapestFlight(tickets);
-	frank. bookCheapestFlight(ticket);
-	Money money = frank.payTheTicket(expedia);
+	frank.bookCheapestFlight(ticket);
+	Money money = frank.payTheTicket(ticket);
 	expedia.acceptPaymentFromTraveller(frank, money);
 	expedia.sendTicketToTraveller(frank);
 
