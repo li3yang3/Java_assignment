@@ -8,13 +8,13 @@ NEUID:001253037
 
 Objects (with Behaviors and State): 
 	Object : Customer
-		State : name, address
+		State : name, address, phoneNumber
 		Behavior : makePhoneCall(), addItem(), placeDeliveryOrder(), payTheOrder()
 	
 	
 	Object : Shop
-		State : Collection of Items, phoneNumber
-		Behavior : deliverOrderToCustomer(), acceptPaymentFromCustomer()
+		State : Collection of Items, serviceNumber
+		Behavior : receiveTheCall(), deliverOrderToCustomer(), acceptPaymentFromCustomer()
 	
 	Object : Item
 		State : name, price, quantity
@@ -26,6 +26,7 @@ Objects (with Behaviors and State):
 class Customer{
 	String name;
 	String address;
+	String phoneNumber;
 	void makePhoneCall(Shop sh){}
 	Item addItem(Item items[]){}
 	void placeDeliveryOrder(Item item){}
@@ -34,8 +35,9 @@ class Customer{
 }
 
 class Shop{
-        Integer phoneNumber;
+        String serviceNumber;
 	Item[] items; 
+	void receiveTheCall(Customer c){}
 	void deliverOrderToCustomer(Customer c, Item i){}
 	Money acceptPaymentFromCustomer(Customer c, Money m){}
 			
@@ -73,8 +75,10 @@ class DeliveryOrder{
 		Customer lisa = new Customer();
 		lisa.name = "lisa";
 		lisa.address = "600 Galer Street Unit 210";
+		lisa.phoneNumber = "2054425594"
 		
 		lisa.makePhoneCall(ikea);
+		ikea.recevieTheCall(lisa);
 		Item item = lisa.addItem(items);
 		lisa.placeDeliveryOrder(item);
 		
