@@ -3,6 +3,9 @@ Scenario : Travelling to LA
 
 Description : A tourist is trying to find the cheapest flight to LA.
 
+Author:Yang Li
+NEUID:001253037
+
 Objects (with Behaviors and State): 
 	  Object : traveller
 		State : name, accountID
