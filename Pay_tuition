@@ -5,7 +5,7 @@ Description : A student wants to pay his tuition through myNEU account.
 Objects (with Behaviors and State): 
 	Object : Student
 		State : name, studentID
-		Behavior : visitWebsite(), findCurrentBill(), payTuitionToWebsite()
+		Behavior : visitWebsite(), findCurrentBill(), confirmTheBill(), payTuitionToWebsite()
 	
 	
 	Object : UniversityWebsite
@@ -13,8 +13,8 @@ Objects (with Behaviors and State):
 		Behavior : displayBillsInfo(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
 	
 	Object : Bill
-		State : name, price
-		Behavior : getName(), getPrice()
+		State : name, price, credit
+		Behavior : getName(), getPrice(), getCredit()
 	
 	Object : Tuition
 		state : amount	
@@ -23,7 +23,7 @@ class Student{
 	String name;
 	Integer studentID;
 	void visitWebsite(UniversityWebsite uw){}
-	Bill findCurrentBill(Bill bills[]){}
+	Bill findCurrentBill(Student s, Bill bills[]){}
 	Tuition payTuitionToWebsite(UniversityWebsite uw){}
 	
 }
@@ -39,13 +39,15 @@ class UniversityWebsite{
 class Bill{
 	String name;
 	Float price;
+	Integer credit;
 	Float getPrice(){}
 	String getName(){}
-
+        Integer getCredit(){}
 }
 
 class Tuition{
 	Float amount;
+	
 }
 
 class Paytuition{
@@ -67,7 +69,8 @@ class Paytuition{
 		
 		rick.visitsWebsite(myNEU);
 		Bill[] bills = myNEU.displayBillsInfo();
-		Bill bill = rick.findCurrentBill(bills);
+		Bill bill = rick.findCurrentBill(rick,bills);
+		rick.confirmTheBill(bill);
 		
 		Tuiton tuition = rick.payTuitionToWebsite(myNEU);
 		myNEU.acceptPaymentFromStudent(rick, tuition);
