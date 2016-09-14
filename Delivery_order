@@ -1,4 +1,4 @@
-
+/*
 Scenario : Order for delivery
 
 Description : A consumer is going to order a delivery through phone calls.
@@ -20,7 +20,7 @@ Objects (with Behaviors and State):
 	
 	Object : Money
 		state : amount	
-
+*/
 class Customer{
 	String name;
 	String address;
