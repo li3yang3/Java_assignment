@@ -28,7 +28,7 @@ class Tourist{
 	String name;
 	Integer accountID;
 	void visitApp(tourapp ta){}
-	House searchARoom(Room rooms[]){}
+	Room searchARoom(Room rooms[]){}
 	void orderARoom(Room room){}
 	Money payRoomCharge(tourapp ta){}
 	
@@ -43,7 +43,7 @@ class Tourapp{
 			
 }
 
-class House{
+class Room{
 	String name;
 	Float price;
 	String address;
