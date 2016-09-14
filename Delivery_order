@@ -3,6 +3,8 @@ Scenario : Order for delivery
 
 Description : A consumer is going to order a delivery through phone calls.
 
+Author:Yang Li
+NEUID:
 
 Objects (with Behaviors and State): 
 	Object : Customer
