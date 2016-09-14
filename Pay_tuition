@@ -13,8 +13,8 @@ Objects (with Behaviors and State):
 		Behavior : displayBillsInfo(),  acceptPaymentFromStudent(), sendConfirmationToStudent()
 	
 	Object : Bill
-		State : name, price, credit
-		Behavior : getName(), getPrice(), getCredit()
+		State : name, price
+		Behavior : getName(), getPrice()
 	
 	Object : Tuition
 		state : amount	
