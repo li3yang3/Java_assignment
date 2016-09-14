@@ -46,7 +46,7 @@ Class Travelwebsite{
 Class Ticket{
       Integer flightNumber;
       Float price;
-      IntegergetFlightNumber(){}
+      Integer getFlightNumber(){}
       Float getPrice(){} 
       
 
@@ -64,10 +64,10 @@ class TraveltoLA{
 	Ticket alaska = new Ticket();
 	alaska.flightNumber = "AS3412";
 	alaska.price = 365.0;
-	Ticket delta = new House();
+	Ticket delta = new Ticket();
 	delta.flightNumber = "DL581";
         delta.price = 295.0;
-	House[] houses = {alaska,delta};
+	Ticket[] tickets = {alaska,delta};
 	
 	Traveller frank = new Traveller();
 	frank.name = "frank";
