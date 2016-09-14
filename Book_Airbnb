@@ -7,20 +7,20 @@ Author:Yang Li
 NEUID:001253037
 
 Objects (with Behaviors and State): 
-	Object : Tourist
+	Object : tourist
 		State : name, accountID
-		Behavior : visitApp(), searchAHouse(), orderAHouse(), payRoomCharge()
+		Behavior : visitApp(), searchARoom(), orderARoom(), payRoomCharge()
 	
 	
 	Object : tourapp
-		State : Collection of Available Houses
-		Behavior : displayHouses(),  acceptPaymentFromTourist(), sendConfirmationToTourist()
+		State : Collection of Available Rooms
+		Behavior : displayRooms(),  acceptPaymentFromTourist(), sendConfirmationToTourist()
 	
-	Object : House
-		State : name, price
+	Object : room
+		State : name, price, address
 		Behavior : getName(), getPrice() 
 	
-	Object : Money
+	Object : money
 		state : amount	
 */
 
@@ -28,16 +28,16 @@ class Tourist{
 	String name;
 	Integer accountID;
 	void visitApp(tourapp ta){}
-	House searchAHouse(House houses[]){}
-	void orderAHouse(House house){}
+	House searchARoom(Room rooms[]){}
+	void orderARoom(Room room){}
 	Money payRoomCharge(tourapp ta){}
 	
 	
 }
 
 class Tourapp{
-        House[] houses;
-        House displayHouses(){}
+        Room[] rooms;
+        Room displayRooms(){}
 	void acceptPaymentFromTourist(Tourist t, Money m){}
 	void sendConfirmationToTourist(Tourist t){}
 			
@@ -46,6 +46,7 @@ class Tourapp{
 class House{
 	String name;
 	Float price;
+	String address;
 	String getName(){}
 	Float getPrice(){}
 	
@@ -60,22 +61,22 @@ class BookAirbnb{
 	public static void main(String args[]){
 	Tourapp airbnb = new Tourapp();
 	
-	House harbourview = new House();
+	Room harbourview = new Room();
 	harbourview.name = "harbourview";
 	harbourview.price = 320.0;
-	House mountainview = new House();
+	Room mountainview = new Room();
 	mountainview.name = "mountainview";
 	mountainview.price = 270.0;
-	House[] houses = {harbourview,mountainview};
+	Room[] rooms = {harbourview,mountainview};
 	
 	Customer allen = new Customer();
 	allen.name = "allen";
 	allen.accountID = "allengo";
 	
 	allen.visitApp(airbnb);
-	House[] houses = airbnb.displayHouses();
-	House house = allen.searchAHouse(houses);
-	allen.orderAHouse(house);
+	Room[] rooms = airbnb.displayRooms();
+	Room room = allen.searchARoom(rooms);
+	allen.orderARoom(room);
 	Money money = allen.payRoomCharge(airbnb);
 	airbnb.acceptPaymentFromTourist(allen,money);
 	airbnb.sendConfirmationToTourist(allen);
