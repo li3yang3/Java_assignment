@@ -1,4 +1,4 @@
-/**
+/*
 Scenario : Order for delivery
 
 Description : A consumer is going to order a delivery through phone calls.
