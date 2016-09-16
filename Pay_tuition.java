@@ -1,4 +1,4 @@
-/*
+/
 Scenario : Pay tuition
 
 Description : A student wants to pay his tuition through myNEU account.
