@@ -60,6 +60,7 @@ class Money{
 class DeliveryOrder{
 	public static void main(String args[]){
 		Shop ikea = new Shop();
+		ikea.phoneNumber = "18887883"
                 
                 Item chair = new Item();
                 chair.name = "president";
