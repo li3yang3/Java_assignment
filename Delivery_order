@@ -45,9 +45,9 @@ class Shop{
 
 class Item{
 	String name;
-	Integer price;
+	Float price;
 	Integer quantity;
-	Integer getPrice(){}
+	Float getPrice(){}
 	Integer getQuantity(){}
 	String getName(){}
 
