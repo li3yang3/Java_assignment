@@ -32,7 +32,7 @@ Class Traveller {
       void rankTheTicketByPrice(Ticket tickets[]){}
       Ticket findCheapestFlight(Ticket tickets[]){}
       void  bookCheapestFlight(Ticket ticket){}
-      Money payTheTicket(ticket){};
+      Money payTheTicket(Ticket ticket){};
       
 }
 
