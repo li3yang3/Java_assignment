@@ -1,4 +1,4 @@
-/*
+/
 Scenario : Booking an Airbnb
 
 Description : A tourist wants to book a house on Airbnb app.
