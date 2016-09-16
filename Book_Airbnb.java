@@ -17,7 +17,7 @@ Objects (with Behaviors and State):
 		Behavior : displayRooms(),  acceptPaymentFromTourist(), sendConfirmationToTourist()
 	
 	Object : room
-		State : name, price, address
+		State : name, price, address,checkinTime, checkoutTime
 		Behavior : getName(), getPrice() 
 	
 	Object : money
@@ -47,6 +47,8 @@ class Room{
 	String name;
 	Float price;
 	String address;
+	Date checkinTime;
+	Date checkoutTime;
 	String getName(){}
 	Float getPrice(){}
 	
@@ -65,10 +67,14 @@ class BookAirbnb{
 	harbourview.name = "harbourview";
 	harbourview.price = 320.0;
 	harbourview.address = "Seattle";
+	harbourview.checkinTime = "11/08/2016";
+	harbourview.checkoutTime = "11/18/2016";
 	Room mountainview = new Room();
 	mountainview.name = "mountainview";
 	mountainview.price = 270.0;
 	mountainview.address = "Bellevue";
+	mountainview.checkinTime = "11/08/2016";
+	mountainview.checkoutTime = "11/18/2016"
 	Room[] rooms = {harbourview,mountainview};
 	
 	Customer allen = new Customer();
