@@ -1,4 +1,4 @@
-/
+/*
 Scenario : Travelling to LA
 
 Description : A tourist is trying to find the cheapest flight to LA.
