@@ -28,7 +28,7 @@ Class Traveller {
       String Name;
       Integer accountID;
       String address;
-      void visitWebsite(travelwebsite tw){}
+      void visitWebsite(Travelwebsite tw){}
       void rankTheTicketByPrice(Ticket tickets[]){}
       Ticket findCheapestFlight(Ticket tickets[]){}
       void  bookCheapestFlight(Ticket ticket){}
