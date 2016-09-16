@@ -1,4 +1,4 @@
-/
+/*
 Scenario : Drive home
 
 Description : A student is driving home from school.
