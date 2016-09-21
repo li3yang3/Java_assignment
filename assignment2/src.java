@@ -63,8 +63,29 @@ public class Assignment2 {
 	 * Write a method to determine whether a number is prime
 	 */
 	public void isPrime(int n) {
-
+                boolean Prime = true;
+    		if (n < 2) {
+    		System.out.println("This is not a Prime Number");
+    		}
+    		else if(n == 2) {
+    		System.out.println("This is a Prime Number");
+    		}
+    		else{
+    		for(int i = 2; i <= n/2; i++){  	
+    			if(n%i == 0) {
+    			Prime = false;
+    			break;
+    			}
+    		}
+    		if(Prime == true){
+	    	System.out.println("This is a Prime Number");
+    		}
+    		else{
+    		System.out.println("This is not a Prime Number");
+    		}
+  	    }
 	}
+	
 
 	/**
 	 * Find N fibonacci numbers Fibonacci Number: f(N) = f(N-1)+f(N-2).
