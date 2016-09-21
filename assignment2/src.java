@@ -156,7 +156,21 @@ public class Assignment2 {
 	 * should be [1, 3, 12, 0, 0].
 	 */
 	public void moveZeroes(int[] nums) {
-
+            int countZero = 0;
+	    int j = 0;
+	    for(int i = 0; i < nums.length; i++){
+	        if(nums[i]==0){
+	        	countZero++;
+	        }
+	        else{
+	            nums[j]=nums[i];
+	            j++;
+	        }
+	    }
+	    for(int n = j; n < nums.length; n++){
+	        nums[n] = 0;
+	    }
+	    return;
 	}
 
 	// Bonus
