@@ -181,26 +181,26 @@ public class Assignment2 {
 	 * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
 	 */
 	public int addDigits(int n) {
-		if (num < 10) {
-        	return num;
+		if (n < 10) {
+        	return n;
     		}
-    		while(num >= 10) {
+    		while(n >= 10) {
       		int digit = 0;
       		int x = 1;
       		int sum = 0;
-      		String m = String.valueOf(num);
+      		String m = String.valueOf(n);
       		int[] nums = new int[m.length()];
       		
         	for(int i = 0; i < nums.length; i++) {
-	            digit = (num/x)%10;
+	            digit = (n/x)%10;
             	    nums[i] = digit;
             	    sum += nums[i];
             	    x = x * 10;
                   }
                   
-                  num = sum;
+                  n = sum;
                }
-               return num;
+               return n;
 	}
 
 	/**
