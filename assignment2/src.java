@@ -167,6 +167,7 @@ public class Assignment2 {
 	            j++;
 	        }
 	    }
+	    
 	    for(int n = j; n < nums.length; n++){
 	        nums[n] = 0;
 	    }
@@ -180,7 +181,26 @@ public class Assignment2 {
 	 * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
 	 */
 	public int addDigits(int n) {
-		return 0;
+		if (num < 10) {
+        	return num;
+    		}
+    		while(num >= 10) {
+      		int digit = 0;
+      		int x = 1;
+      		int sum = 0;
+      		String m = String.valueOf(num);
+      		int[] nums = new int[m.length()];
+      		
+        	for(int i = 0; i < nums.length; i++) {
+	            digit = (num/x)%10;
+            	    nums[i] = digit;
+            	    sum += nums[i];
+            	    x = x * 10;
+                  }
+                  
+                  num = sum;
+               }
+               return num;
 	}
 
 	/**
@@ -191,16 +211,16 @@ public class Assignment2 {
 	 * number.
 	 */
 	public boolean isUgly(int n) {
-		if (num <= 0) {return false;}
-    		if (num == 1) {return true;}
-    		if (num % 2 == 0) {
-        		return isUgly(num/2);
+		if (n <= 0) {return false;}
+    		if (n == 1) {return true;}
+    		if (n % 2 == 0) {
+        		return isUgly(n/2);
     		}
-    		if (num % 3 == 0) {
-        		return isUgly(num/3);
+    		if (n % 3 == 0) {
+        		return isUgly(n/3);
     		}
-    		if (num % 5 == 0) {
-        		return isUgly(num/5);
+    		if (n % 5 == 0) {
+        		return isUgly(n/5);
     		}
     			return false;   
 		}
