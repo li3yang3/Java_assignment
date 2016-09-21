@@ -100,7 +100,16 @@ public class Assignment2 {
 	 * reversed. Given s = "hello", return "olleh".
 	 */
 	public String reverseString(String s) {
-		return null;
+		char[] rs = s.toCharArray();
+		char[] newrs = new char[rs.length];
+		int l = rs.length-1;
+		for(int i = 0 ; i < rs.length; i++) {
+		      newrs[l] = rs[i];
+		      l--;
+		}
+		String res = String.valueOf(newrs);
+		System.out.println(res);
+		return res;
 	}
 
 	/**
