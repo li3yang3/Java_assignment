@@ -29,16 +29,16 @@ public class Assignment2 {
 	 * and the gender is male
 	 */
 	public void personType(Person person) {
-    if (person.age < 1) 
-    	System.out.println("Infant");
-    if (person.age < 3 && person.age > 1)
-    	System.out.println("Toddler");
-    if (person.age < 5 && person.age > 3)
-    	System.out.println("Pre Schooler");
-    if (person.age < 6 && person.age > 5 &&  person.gender == true)
-    	System.out.println("KG Girl");
-    if (person.age < 6 && person.age > 5 &&  person.gender == false)
-    	System.out.println("KG Boy");
+    		if (person.age < 1) 
+    		System.out.println("Infant");
+    		if (person.age < 3 && person.age > 1)
+    		System.out.println("Toddler");
+    		if (person.age < 5 && person.age > 3)
+    		System.out.println("Pre Schooler");
+    		if (person.age < 6 && person.age > 5 &&  person.gender == true)
+    		System.out.println("KG Girl");
+    		if (person.age < 6 && person.age > 5 &&  person.gender == false)
+    		System.out.println("KG Boy");
     }
     
 
@@ -49,14 +49,14 @@ public class Assignment2 {
 	 * 20(inclusive), print "Weird". If N is even and N>20, print "Not Weird".
 	 */
 	public void weirdNumber(int n) {
-    if (n%2 != 0) 
-			System.out.println("Weird");
+    		if (n%2 != 0) 
+		System.out.println("Weird");
 		if (n%2 == 0 && n >= 2 && n <= 5)
-			System.out.println("Not Weird");
+		System.out.println("Not Weird");
 		if (n%2 == 0 && n >= 6 && n <= 20)
-			System.out.println("Weird");
+		System.out.println("Weird");
 		if (n%2 == 0 && n > 20 )
-			System.out.println("Not Weird");
+		System.out.println("Not Weird");
 	}
 
 	/**
