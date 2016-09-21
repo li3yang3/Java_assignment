@@ -133,8 +133,21 @@ public class Assignment2 {
 	 * Given an array of nums, write a function to find the largest two integer.
 	 */
 	public int[] findTheLargestTwo(int[] nums) {
-		return null;
+ 		int maxNum = 0;
+		int smaxNum = 0;
+		for(int i = 0; i < nums.length; i++) {
+			maxNum = Math.max(maxNum,nums[i]);
+		}
+		for(int j = 0; j < nums.length; j++) {
+			if (nums[j] == maxNum){
+				nums[j] = 0;
+			}
+			smaxNum = Math.max(smaxNum,nums[j]);
+		}
+		int[]  largeTwo = {maxNum,smaxNum};
+		return largeTwo;
 	}
+
 
 	/**
 	 * Given an array nums, write a function to move all 0's to the end of it
