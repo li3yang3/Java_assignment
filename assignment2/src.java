@@ -140,7 +140,7 @@ public class Assignment2 {
 		}
 		for(int j = 0; j < nums.length; j++) {
 			if (nums[j] == maxNum){
-				nums[j] = 0;
+				nums[j] = Integer.MIN_VALUE;
 			}
 			smaxNum = Math.max(smaxNum,nums[j]);
 		}
