@@ -158,7 +158,7 @@ public class Assignment2 {
 	public void moveZeroes(int[] nums) {
             int countZero = 0;
 	    int j = 0;
-	    for(int i = 0; i < nums.length; i++){
+	    for(int i = 0; i < nums.length; i++){           //数出数组中有多少个0，若当前值不为0，就将其顺序挪动到数组前部。
 	        if(nums[i]==0){
 	        	countZero++;
 	        }
@@ -168,7 +168,7 @@ public class Assignment2 {
 	        }
 	    }
 	    
-	    for(int n = j; n < nums.length; n++){
+	    for(int n = j; n < nums.length; n++){            //将所有的0补到数组的末尾
 	        nums[n] = 0;
 	    }
 	    return;
@@ -181,10 +181,10 @@ public class Assignment2 {
 	 * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
 	 */
 	public int addDigits(int n) {
-		if (n < 10) {
+		if (n < 10) {                               //若n<10,则直接返回n
         	return n;
-    		}
-    		while(n >= 10) {
+    		}  
+    		while(n >= 10) {                            //若n>=10,则将n的每一位求出存入数组，并全部依次相加得到新n,直到n<10才返回n
       		int digit = 0;
       		int x = 1;
       		int sum = 0;
@@ -213,15 +213,15 @@ public class Assignment2 {
 	public boolean isUgly(int n) {
 		if (n <= 0) {return false;}
     		if (n == 1) {return true;}
-    		if (n % 2 == 0) {
+    		if (n % 2 == 0) {                            //如果能被2连续整除，则说明只包含素数因子2
         		return isUgly(n/2);
     		}
-    		if (n % 3 == 0) {
+    		if (n % 3 == 0) {                            //如果能被3连续整除，则说明只包含素数因子3
         		return isUgly(n/3);
     		}
-    		if (n % 5 == 0) {
+    		if (n % 5 == 0) {                            //如果能被5连续整除，则说明只包含素数因子5
         		return isUgly(n/5);
     		}
-    			return false;   
+    			return false;                        //否则的话说明该数还有其他素数因子
 		}
 	
