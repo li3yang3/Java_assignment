@@ -31,13 +31,13 @@ public class Assignment2 {
 	public void personType(Person person) {
     		if (person.age < 1) 
     		System.out.println("Infant");
-    		if (person.age < 3 && person.age > 1)
+    		if (person.age < 3 && person.age >= 1)
     		System.out.println("Toddler");
-    		if (person.age < 5 && person.age > 3)
+    		if (person.age < 5 && person.age >= 3)
     		System.out.println("Pre Schooler");
-    		if (person.age < 6 && person.age > 5 &&  person.gender == true)
+    		if (person.age < 6 && person.age >= 5 &&  person.gender == true)
     		System.out.println("KG Girl");
-    		if (person.age < 6 && person.age > 5 &&  person.gender == false)
+    		if (person.age < 6 && person.age >= 5 &&  person.gender == false)
     		System.out.println("KG Boy");
     }
     
