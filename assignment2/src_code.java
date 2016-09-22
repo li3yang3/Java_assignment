@@ -71,7 +71,7 @@ public class Assignment2 {
     		System.out.println("This is a Prime Number");
     		}
     		else{
-    		for(int i = 2; i <= n/2; i++){  	
+    		for(int i = 2; i <= n/2; i++){  	       //n只要能被从2到n/2的任意一个数整除，则n就不是Prime Number
     			if(n%i == 0) {
     			Prime = false;
     			break;
@@ -117,14 +117,14 @@ public class Assignment2 {
 	 * reversed. Given s = "hello", return "olleh".
 	 */
 	public String reverseString(String s) {
-		char[] rs = s.toCharArray();
-		char[] newrs = new char[rs.length];
+		char[] rs = s.toCharArray();               //将String类型转换为Char类型
+		char[] newrs = new char[rs.length];        //定义一个长度为s长度的新char数组
 		int l = rs.length-1;
-		for(int i = 0 ; i < rs.length; i++) {
+		for(int i = 0 ; i < rs.length; i++) {      //将rs数组里的字符从尾到头添加入新数组newrs
 		      newrs[l] = rs[i];
 		      l--;
 		}
-		String res = String.valueOf(newrs);
+		String res = String.valueOf(newrs);        //将char类型转换回String
 		System.out.println(res);
 		return res;
 	}
@@ -136,13 +136,13 @@ public class Assignment2 {
  		int maxNum = 0;
 		int smaxNum = 0;
 		for(int i = 0; i < nums.length; i++) {
-			maxNum = Math.max(maxNum,nums[i]);
+			maxNum = Math.max(maxNum,nums[i]);             //第一次循环找出最大值，并储存入maxNum
 		}
-		for(int j = 0; j < nums.length; j++) {
-			if (nums[j] == maxNum){
+		for(int j = 0; j < nums.length; j++) {                 //第二次循环找出次最大值
+			if (nums[j] == maxNum){                        //当遇到之前最大值时，将当前数组value置为int_min
 				nums[j] = Integer.MIN_VALUE;
 			}
-			smaxNum = Math.max(smaxNum,nums[j]);
+			smaxNum = Math.max(smaxNum,nums[j]);           //将次最大值存入smaxNum
 		}
 		int[]  largeTwo = {maxNum,smaxNum};
 		return largeTwo;
