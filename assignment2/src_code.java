@@ -96,7 +96,7 @@ public class Assignment2 {
 			System.out.println("the input number should be positive!");
 			return null;
 		}
-		int[] fib = new int[n+2];
+		int[] fib = new int[n+1];
 		if (n == 0) {
 			fib[0] = 1;
 		}
@@ -106,7 +106,7 @@ public class Assignment2 {
 		}
 		fib[0] = 1;
 		fib[1] = 1;
-		for(int i = 2; i < n;i++) {
+		for(int i = 2; i <= n;i++) {
 			fib[i] = fib[i-1] + fib[i-2];
 		}
 		
