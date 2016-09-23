@@ -95,6 +95,7 @@ public class Assignment2 {
 		int[] fib = new int[n+2];
 		if (n < 0) {
 			System.out.println("the input number should be positive!");
+			return null;
 		}
 		if (n == 0) {
 			fib[0] = 1;
