@@ -7,6 +7,9 @@
  * 
  * @author Jia
  */
+ /*
+ Java Assignment2 author:LI YANG 
+ */
 
 class Person {
 	int age;
