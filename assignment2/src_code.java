@@ -157,9 +157,7 @@ public class Assignment2 {
 	 * should be [1, 3, 12, 0, 0].
 	 */
 	public void moveZeroes(int[] nums) {
-	    if (nums == null) {
-	    	return null;
-	    }
+	   
             int countZero = 0;
 	    int j = 0;
 	    for(int i = 0; i < nums.length; i++){           //数出数组中有多少个0，若当前值不为0，就将其顺序挪动到数组前部。
@@ -175,7 +173,7 @@ public class Assignment2 {
 	    for(int n = j; n < nums.length; n++){            //将所有的0补到数组的末尾
 	        nums[n] = 0;
 	    }
-	    return;
+	    
 	}
 
 	// Bonus
