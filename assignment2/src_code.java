@@ -32,7 +32,9 @@ public class Assignment2 {
 	 * and the gender is male
 	 */
 	public void personType(Person person) {
-    		if (person.age < 1) 
+		if (person.age < 0)
+			return null;
+    		else if (person.age < 1) 
     		System.out.println("Infant");
     		else if (person.age < 3 && person.age >= 1)
     		System.out.println("Toddler");
