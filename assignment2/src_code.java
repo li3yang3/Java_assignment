@@ -68,7 +68,7 @@ public class Assignment2 {
 	 * Write a method to determine whether a number is prime
 	 */
 	public void isPrime(int n) {
-                boolean Prime = true;
+                boolean prime = true;
     		if (n < 2) {
     		System.out.println("This is not a Prime Number");
     		}
@@ -78,11 +78,11 @@ public class Assignment2 {
     		else{
     		for(int i = 2; i <= n/2; i++){  	       //n只要能被从2到n/2的任意一个数整除，则n就不是Prime Number
     			if(n%i == 0) {
-    			Prime = false;
+    			prime = false;
     			break;
     			}
     		}
-    		if(Prime == true){
+    		if(prime == true){
 	    	System.out.println("This is a Prime Number");
     		}
     		else{
