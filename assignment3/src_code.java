@@ -70,7 +70,21 @@ public class Assignment3 {
 	 * [1,4,6,4,1]
 	 */
 	public int[][] generatePascalsTriangle(int n) {
-		return null;
+	     List<List<Integer>> newarr = new ArrayList<List<Integer>>();
+    
+    		for(int i = 0; i < numRows; i++) {
+        		List<Integer> arr = new ArrayList<Integer>();
+        	for(int j = 0; j < i + 1; j++) {
+            	if( j == 0 || i == j ) {
+               		 arr.add(1);
+           	 }
+            else{
+                arr.add(newarr.get(i-1).get(j-1) + newarr.get(i-1).get(j));
+            }
+        }
+        	newarr.add(arr);
+    }
+    		return newarr;
 	}
 
 	/**
