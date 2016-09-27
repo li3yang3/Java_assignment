@@ -76,7 +76,7 @@ public class Assignment2 {
     		System.out.println("This is a Prime Number");
     		}
     		else{
-    		for(int i = 2; i <= n/2; i++){  	       //n只要能被从2到n/2的任意一个数整除，则n就不是Prime Number
+    		for(int i = 2; i <= n/2; i++){  	     
     			if(n%i == 0) {
     			prime = false;
     			break;
@@ -123,14 +123,14 @@ public class Assignment2 {
 	 * reversed. Given s = "hello", return "olleh".
 	 */
 	public String reverseString(String s) {
-		char[] rs = s.toCharArray();               //将String类型转换为Char类型
-		char[] newrs = new char[rs.length];        //定义一个长度为s长度的新char数组
+		char[] rs = s.toCharArray();               
+		char[] newrs = new char[rs.length];       
 		int l = rs.length-1;
-		for(int i = 0 ; i < rs.length; i++) {      //将rs数组里的字符从尾到头添加入新数组newrs
+		for(int i = 0 ; i < rs.length; i++) {      
 		      newrs[l] = rs[i];
 		      l--;
 		}
-		String res = String.valueOf(newrs);        //将char类型转换回String
+		String res = String.valueOf(newrs);       
 		System.out.println(res);
 		return res;
 	}
@@ -142,13 +142,13 @@ public class Assignment2 {
  		int maxNum = 0;
 		int smaxNum = 0;
 		for(int i = 0; i < nums.length; i++) {
-			maxNum = Math.max(maxNum,nums[i]);             //第一次循环找出最大值，并储存入maxNum
+			maxNum = Math.max(maxNum,nums[i]);             
 		}
-		for(int j = 0; j < nums.length; j++) {                 //第二次循环找出次最大值
-			if (nums[j] == maxNum){                        //当遇到之前最大值时，将当前数组value置为int_min
+		for(int j = 0; j < nums.length; j++) {                 
+			if (nums[j] == maxNum){                        
 				nums[j] = Integer.MIN_VALUE;
 			}
-			smaxNum = Math.max(smaxNum,nums[j]);           //将次最大值存入smaxNum
+			smaxNum = Math.max(smaxNum,nums[j]);           
 		}
 		int[]  largeTwo = {maxNum,smaxNum};
 		return largeTwo;
@@ -165,7 +165,7 @@ public class Assignment2 {
 	   
             int countZero = 0;
 	    int j = 0;
-	    for(int i = 0; i < nums.length; i++){           //数出数组中有多少个0，若当前值不为0，就将其顺序挪动到数组前部。
+	    for(int i = 0; i < nums.length; i++){          
 	        if(nums[i]==0){
 	        	countZero++;
 	        }
@@ -175,7 +175,7 @@ public class Assignment2 {
 	        }
 	    }
 	    
-	    for(int n = j; n < nums.length; n++){            //将所有的0补到数组的末尾
+	    for(int n = j; n < nums.length; n++){           
 	        nums[n] = 0;
 	    }
 	    
@@ -188,10 +188,10 @@ public class Assignment2 {
 	 * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
 	 */
 	public int addDigits(int n) {
-		if (n < 10) {                               //若n<10,则直接返回n
+		if (n < 10) {                               
         	return n;
     		}  
-    		while(n >= 10) {                            //若n>=10,则将n的每一位求出存入数组，并全部依次相加得到新n,直到n<10才返回n
+    		while(n >= 10) {                           
       		int digit = 0;
       		int x = 1;
       		int sum = 0;
@@ -220,15 +220,15 @@ public class Assignment2 {
 	public boolean isUgly(int n) {
 		if (n <= 0) {return false;}
     		if (n == 1) {return true;}
-    		if (n % 2 == 0) {                            //如果能被2连续整除，则说明只包含素数因子2
+    		if (n % 2 == 0) {                          
         		return isUgly(n/2);
     		}
-    		if (n % 3 == 0) {                            //如果能被3连续整除，则说明只包含素数因子3
+    		if (n % 3 == 0) {                            
         		return isUgly(n/3);
     		}
-    		if (n % 5 == 0) {                            //如果能被5连续整除，则说明只包含素数因子5
+    		if (n % 5 == 0) {                            
         		return isUgly(n/5);
     		}
-    			return false;                        //否则的话说明该数还有其他素数因子
+    			return false;                       
 		}
 	
