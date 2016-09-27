@@ -38,7 +38,7 @@ public class Assignment3 {
 		      int res = n%count;
 		      System.out.println(res);
 		      return res;
-	}
+	 }
 
 	/**
 	 * Given a integer 'n', if n is odd, print n odd numbers, if n is even,
@@ -46,7 +46,22 @@ public class Assignment3 {
 	 * 6
 	 */
 	public void printNumbers(int n) {
-
+         	
+		if(n < 0) {
+		return;
+		}
+    		if(n%2 == 0) {
+    		for(int i = 0; i < 2*n; i = i + 2) {
+    		System.out.println(i);
+    		
+    		}
+    	    }
+   	 	else {
+    		for(int i = 1; i < 2*n; i = i + 2) {
+    		System.out.println(i);
+    		
+    		}
+    	    }           
 	}
 
 	/**
