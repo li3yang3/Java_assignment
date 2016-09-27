@@ -57,8 +57,8 @@ public class Assignment3 {
     		}
     	    }
    	 	else {
-    		for(int i = 1; i < 2*n; i = i + 2) {
-    		System.out.println(i);
+    		for(int j = 1; j < 2*n; j = j + 2) {
+    		System.out.println(j);
     		
     		}
     	    }           
