@@ -29,7 +29,15 @@ public class Assignment3 {
 	 * For example, n = 100, return 1
 	 */
 	public int countDigits(int n) {
-		return -1;
+		      int count = 1;
+	    	      int divide = n;
+		      while(divide >= 10) {
+		    	  divide = divide/10;
+		    	  count++;
+		      }
+		      int res = n%count;
+		      System.out.println(res);
+		      return res;
 	}
 
 	/**
