@@ -45,25 +45,25 @@ public class Assignment3 {
 	 * of a string. For example: Given s = "hello", return "holle".
 	 */
 	public String reverseVowels(String s) {
-		  char res[] = s.toCharArray();
-      int len = res.length;
-      String vowel = "AEIOUaeiou";
-      ArrayList<Character> arr = new ArrayList<Character>();
-      ArrayList<Integer> arridx = new ArrayList<Integer>();
+		char res[] = s.toCharArray();
+  		int len = res.length;
+        	String vowel = "AEIOUaeiou";
+        	ArrayList<Character> arr = new ArrayList<Character>();
+        	ArrayList<Integer> arridx = new ArrayList<Integer>();
     
-      for(int i = 0; i < len; i++) {
-          if(vowel.contains(res[i]+"")) {
-              arr.add(res[i]);
-              arridx.add(i);
-          }
-      }
-      int m = 0;
-      for(int j = arridx.size()-1; j >= 0; j--) {
-            res[arridx.get(j)] = arr.get(m++);
-      }
-      String ans = String.valueOf(res);
-      return ans;    
-	}
+           for(int i = 0; i < len; i++) {
+              if(vowel.contains(res[i]+"")) {
+              		arr.add(res[i]);
+              		arridx.add(i);
+             		}
+            }
+        	int m = 0;
+            for(int j = arridx.size()-1; j >= 0; j--) {
+               res[arridx.get(j)] = arr.get(m++);
+            }
+               String ans = String.valueOf(res);
+               return ans;    
+	    }
 
 	/**
 	 * Given a string s consists of upper/lower-case alphabets and empty space
