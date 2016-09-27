@@ -128,7 +128,31 @@ public class Assignment3 {
 	 * soccer" --> "soccer like I"
 	 */
 	public String reverseString2(String str) {
-		return null;
+		char res[] = s.toCharArray();
+        	int len = res.length;
+        	ArrayList<String> arr = new ArrayList<String>();
+        	String result = "";
+        	String ans = "";
+        	for( int i = 0; i < len; i++) {
+            	if(res[i] != ' ') {
+	           ans +=  res[i];
+                if( i == len - 1 || res[i+1] == ' ') {
+                    arr.add(ans);
+                    ans = "";
+                    continue;
+                	}
+                
+            	}
+        	}
+        	for(int j = arr.size() - 1; j >= 0; j--) {
+              		result += arr.get(j);
+              		if(j == 0){
+                  	break;
+              		}
+              		result += " ";
+              
+        	}
+        	return result;
 	}
 
 	// Bonus
