@@ -166,6 +166,18 @@ public class Assignment3 {
 	 * message only contains upper letter.
 	 */
 	public int checkMessage(String message) {
-		return -1;
+		char res[] = message.toCharArray();
+		String idx = "SOS";
+		char newidx[] = idx.toCharArray();
+		int count = 0;
+		
+		for(int i = 0; i < res.length ; i++ ) {
+			
+			if(res[i] != newidx[i%3]) {
+				count++;
+			}
+		}
+		System.out.println(count+"");
+		return count;
 	}
 }
