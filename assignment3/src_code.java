@@ -177,7 +177,7 @@ public class Assignment3 {
 				count++;
 			}
 		}
-		System.out.println(count+"");
+		
 		return count;
 	}
 }
