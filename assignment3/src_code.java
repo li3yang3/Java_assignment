@@ -105,7 +105,22 @@ public class Assignment3 {
 	 * sequence consists of non-space characters only.
 	 */
 	public int lengthOfLastWord(String str) {
-		return -1;
+		  char res[] = s.toCharArray();
+        
+        	  int len = res.length-1;
+                  int j = len;
+                  int count = 0;
+        	  while(j >= 0) {
+           		if(res[j] != ' ') {
+               			count++;
+               		if(j == 0 || res[j-1] == ' '){
+                   		break;
+               		}
+           		}
+           
+           		j--;
+        	}
+        return count;
 	}
 
 	/**
