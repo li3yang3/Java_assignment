@@ -70,21 +70,28 @@ public class Assignment3 {
 	 * [1,4,6,4,1]
 	 */
 	public int[][] generatePascalsTriangle(int n) {
-	     List<List<Integer>> newarr = new ArrayList<List<Integer>>();
+            if(n < 0) {
+		    return null;
+	    }
+	    int [][] newarr = new int[numRows][numRows];
     
-    		for(int i = 0; i < numRows; i++) {
-        		List<Integer> arr = new ArrayList<Integer>();
-        	for(int j = 0; j < i + 1; j++) {
-            	if( j == 0 || i == j ) {
-               		 arr.add(1);
-           	 }
-            else{
-                arr.add(newarr.get(i-1).get(j-1) + newarr.get(i-1).get(j));
+            for(int i = 0; i < numRows; i++) {
+    	    int[] arr = new int[i+1];
+            for(int j = 0; j < i + 1; j++) {
+            if( j == 0 || i == j ) {
+                arr[j] = 1;
             }
+            else{
+            	arr[j] = newarr[i-1][j-1] + newarr[i-1][j];
+                
+            }
+            newarr[i][j] = arr[j];
+            System.out.print(newarr[i][j]+" ");
+             }
+            System.out.println("");
+        
         }
-        	newarr.add(arr);
-    }
-    		return newarr;
+            return newarr;
 	}
 
 	/**
@@ -110,7 +117,7 @@ public class Assignment3 {
             }
                String ans = String.valueOf(res);
                return ans;    
-	    }
+	}
 
 	/**
 	 * Given a string s consists of upper/lower-case alphabets and empty space
@@ -193,5 +200,5 @@ public class Assignment3 {
 		}
 		
 		return count;
+		}
 	}
-}
