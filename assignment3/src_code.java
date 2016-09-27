@@ -11,7 +11,14 @@ public class Assignment3 {
 	 * return {1,3,9,27}
 	 */
 	public int[] findPowerOfThree(int n) {
-		return null;
+		int number = 3; 
+		int arr[] = new int[n];
+		arr[0] = 1;
+		for(int i = 1; i < n; i++) {
+	             arr[i] = arr[i-1] * number;
+		  }
+	
+		return arr;
 	}
 
 	/**
