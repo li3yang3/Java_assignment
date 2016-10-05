@@ -11,6 +11,19 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+public class findPowerTest {
+
+	@Test
+	public void test() {
+		findPower test = new findPower();
+		int[] res = {1,3,9,27,81};
+		assertArrayEquals(test.findPowerOfThree(5),res);
+		int[] res1 = {1};
+		assertArrayEquals(test.findPowerOfThree(1),res1);
+	}
+
+}
+
 public class countDigitsTest {
 
 	@Test
