@@ -24,6 +24,19 @@ public class lengthOfLastWordTest {
 
 }
 
+public class reverseString2Test {
+
+	@Test
+	public void test() {
+		reverseString2 test = new reverseString2();
+		String str = "I love football";
+		String strrev = "football love I";
+		assertTrue(test.reverseWord(str) == strrev);
+	}
+
+}
+
+
 public class checkMessegeTest {
 
 	@Test
