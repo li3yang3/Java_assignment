@@ -11,6 +11,19 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+public class lengthOfLastWordTest {
+
+	@Test
+	public void test() {
+		lengthOfLastWord test = new lengthOfLastWord();
+		assertTrue(test.lengthOfLastWord("     abcd") == 4);
+		assertTrue(test.lengthOfLastWord("     abcd    ") == 4);
+		assertTrue(test.lengthOfLastWord("a    ") == 1);
+		assertTrue(test.lengthOfLastWord("a b asdf  asdf abcd") == 4);
+	}
+
+}
+
 public class checkMessegeTest {
 
 	@Test
