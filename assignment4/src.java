@@ -4,12 +4,28 @@
  * 
  * @author Jia
  */
-/* 
-1. Write JUnitTest for all the problems in assignemnt3.
+/*
+1. Write JUnitTest for all the problems in assignemnt3.*/
 
+import static org.junit.Assert.*;
 
+import org.junit.Test;
+
+public class checkMessegeTest {
+
+	@Test
+	public void test() {
+		checkMessege mes = new checkMessege();
+		assertTrue(mes.checkMessage("SOSSUSSOP") == 2);
+		assertTrue(mes.checkMessage("SABCDEFGS") == 7);
+		assertTrue(mes.checkMessage("SOSSOSSOS") == 0);
+	}
+
+}
+
+/*
 2. Implement Class MusicAlbum which encapsulated a music Album, each album has a string variable albumTitle and a String variable singer representing the name of singer, double variable price representing the price of album, objects of this class are Initialized using all of its instance variables.
-The class has accessor methods for all its Variables and a mutator method for price.
+The class has accessor methods for all its Variables and a mutator method for price.*/
 
 
 3. Write a class named GasTank containing:
