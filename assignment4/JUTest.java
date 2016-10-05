@@ -105,15 +105,7 @@ public class checkMessegeTest {
 	
 
 
-3. Write a class named GasTank containing:
-An instance variable named amount of type double, initialized to 0.
-A method named addGas that accepts a parameter of type double . The value of the amount instance variable is increased by the value of the parameter.
-A method named useGas that accepts a parameter of type double . The value of the amount instance variable is decreased by the value of the parameter.
-A method named getGasLevel that accepts no parameters. getGasLevel returns the value of the amount instance variable.
 
-
-4. Design and implement a class called Car. You need to create necessary attributes for this class, and method if needed
-Define the Car constructor to initialize these values (in that order). Include getter and setter methods for all instance data.
 
 
 5. Combine with problem 3 and 4, define a class named Driver that contains methods like drive and addGas so that the driver can drive the car.
