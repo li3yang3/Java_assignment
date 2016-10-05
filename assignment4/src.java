@@ -11,6 +11,19 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+public class countDigitsTest {
+
+	@Test
+	public void test() {
+		countDigits test = new countDigits();
+		assertTrue(test.countDigits(140) == 2);
+		assertTrue(test.countDigits(1396) == 0);
+		assertTrue(test.countDigits(100) == 1);
+	}
+
+}
+
+
 public class pascalTest {
 
 	@Test
