@@ -11,6 +11,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+public class pascalTest {
+
+	@Test
+	public void test() {
+		pascal test = new pascal();
+		int[][] res = {{1},{1,1},{1,2,1}};
+		assertArrayEquals(test.generate(3),res);
+		
+	}
+
+}
+
 public class reverseVowelsTest {
 
 	@Test
