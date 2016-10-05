@@ -11,6 +11,19 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+public class reverseVowelsTest {
+
+	@Test
+	public void test() {
+		reverseVowels test = new reverseVowels();
+		assertEquals(test.reverseV("leetcode"), "leotcede");
+		assertEquals(test.reverseV("AEIOUaeiou"), "uoieaUOIEA");
+		assertEquals(test.reverseV("hello"), "holle");
+		
+	}
+
+}
+
 public class lengthOfLastWordTest {
 
 	@Test
@@ -28,10 +41,10 @@ public class reverseString2Test {
 
 	@Test
 	public void test() {
-		reverseString2 test = new reverseString2();
-		String str = "I love football";
-		String strrev = "football love I";
-		assertTrue(test.reverseWord(str) == strrev);
+		reverseWords test = new reverseWords();
+		String str = "I love to paly on sunday";
+		String strrev = "sunday on paly to love I";
+		assertEquals(test.reverseWord(str),strrev);
 	}
 
 }
