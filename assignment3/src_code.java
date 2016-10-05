@@ -126,7 +126,7 @@ public class Assignment3 {
 	 * sequence consists of non-space characters only.
 	 */
 	public int lengthOfLastWord(String str) {
-		  char res[] = s.toCharArray();
+		  char res[] = str.toCharArray();
         
         	  int len = res.length-1;
                   int j = len;
@@ -149,7 +149,7 @@ public class Assignment3 {
 	 * soccer" --> "soccer like I"
 	 */
 	public String reverseString2(String str) {
-		char res[] = s.toCharArray();
+		char res[] = str.toCharArray();
         	int len = res.length;
         	ArrayList<String> arr = new ArrayList<String>();
         	String result = "";
