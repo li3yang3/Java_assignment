@@ -3,10 +3,10 @@
 */
 
 public class Driver {
-       String name;
-       int licenseNo;
-       Double gasamount;
-       int age;
+       private String name;
+       private int licenseNo;
+       private Double gasamount;
+       private int age;
        
        public Driver(String name,int licenseNo,int age){
     	   this.name = name;
