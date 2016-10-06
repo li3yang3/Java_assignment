@@ -8,3 +8,30 @@ In the case of underflow, the user should be informed with a message & a value o
 
 Assumptions: The stack will hold up to 10 integer values.
 */
+
+
+public class Stack {
+	public final int maxSize = 10;
+	private int top;
+	private int[] arr;
+	
+	public Stack(int maxSize){
+		   arr = new int[maxSize];
+		   top = -1;
+	   }
+       public int pop(){
+    	   if(top == -1){
+    		   System.out.println("the Stack is empty");
+           return 0;
+    	   }
+    	   return arr[top--]; 
+       }
+    	   
+       public void push(int num){
+    	 if(top > maxSize - 1){
+    		 System.out.println("out of bounds");
+    	 }
+    	   arr[++top] = num;
+       }
+}
+
