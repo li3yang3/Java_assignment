@@ -2,9 +2,9 @@
 The class has accessor methods for all its Variables and a mutator method for price.*/
 
 public class MusicAlbum{
-	String albumTitle;
-	String singer;
-	double price;
+	private String albumTitle;
+	private String singer;
+	private double price;
 	
 	public MusicAlbum(String albumTitle,String singer,double price) {
 	     this.albumTitle = albumTitle;
