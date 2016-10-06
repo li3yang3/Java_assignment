@@ -17,9 +17,9 @@ public class findPowerTest {
 	public void test() {
 		findPower test = new findPower();
 		int[] res = {1,3,9,27,81};
-		assertArrayEquals(test.findPowerOfThree(5),res);
+		Assert.assertArrayEquals(test.findPowerOfThree(5),res);
 		int[] res1 = {1};
-		assertArrayEquals(test.findPowerOfThree(1),res1);
+		Assert.assertArrayEquals(test.findPowerOfThree(1),res1);
 	}
 
 }
@@ -29,9 +29,9 @@ public class countDigitsTest {
 	@Test
 	public void test() {
 		countDigits test = new countDigits();
-		assertTrue(test.countDigits(140) == 2);
-		assertTrue(test.countDigits(1396) == 0);
-		assertTrue(test.countDigits(100) == 1);
+		Assert.assertTrue(test.countDigits(140) == 2);
+		Assert.assertTrue(test.countDigits(1396) == 0);
+		Assert.assertTrue(test.countDigits(100) == 1);
 	}
 
 }
@@ -43,7 +43,7 @@ public class pascalTest {
 	public void test() {
 		pascal test = new pascal();
 		int[][] res = {{1},{1,1},{1,2,1}};
-		assertArrayEquals(test.generate(3),res);
+		Assert.assertArrayEquals(test.generate(3),res);
 		
 	}
 
@@ -54,9 +54,9 @@ public class reverseVowelsTest {
 	@Test
 	public void test() {
 		reverseVowels test = new reverseVowels();
-		assertEquals(test.reverseV("leetcode"), "leotcede");
-		assertEquals(test.reverseV("AEIOUaeiou"), "uoieaUOIEA");
-		assertEquals(test.reverseV("hello"), "holle");
+		Assert.assertEquals(test.reverseV("leetcode"), "leotcede");
+		Assert.assertEquals(test.reverseV("AEIOUaeiou"), "uoieaUOIEA");
+		Assert.assertEquals(test.reverseV("hello"), "holle");
 		
 	}
 
@@ -67,10 +67,10 @@ public class lengthOfLastWordTest {
 	@Test
 	public void test() {
 		lengthOfLastWord test = new lengthOfLastWord();
-		assertTrue(test.lengthOfLastWord("     abcd") == 4);
-		assertTrue(test.lengthOfLastWord("     abcd    ") == 4);
-		assertTrue(test.lengthOfLastWord("a    ") == 1);
-		assertTrue(test.lengthOfLastWord("a b asdf  asdf abcd") == 4);
+		Assert.assertTrue(test.lengthOfLastWord("     abcd") == 4);
+		Assert.assertTrue(test.lengthOfLastWord("     abcd    ") == 4);
+		Assert.assertTrue(test.lengthOfLastWord("a    ") == 1);
+		Assert.assertTrue(test.lengthOfLastWord("a b asdf  asdf abcd") == 4);
 	}
 
 }
@@ -82,7 +82,7 @@ public class reverseString2Test {
 		reverseWords test = new reverseWords();
 		String str = "I love to paly on sunday";
 		String strrev = "sunday on paly to love I";
-		assertEquals(test.reverseWord(str),strrev);
+		Assert.assertEquals(test.reverseWord(str),strrev);
 	}
 
 }
@@ -93,9 +93,9 @@ public class checkMessegeTest {
 	@Test
 	public void test() {
 		checkMessege mes = new checkMessege();
-		assertTrue(mes.checkMessage("SOSSUSSOP") == 2);
-		assertTrue(mes.checkMessage("SABCDEFGS") == 7);
-		assertTrue(mes.checkMessage("SOSSOSSOS") == 0);
+		Assert.assertTrue(mes.checkMessage("SOSSUSSOP") == 2);
+		Assert.assertTrue(mes.checkMessage("SABCDEFGS") == 7);
+		Assert.assertTrue(mes.checkMessage("SOSSOSSOS") == 0);
 	}
 
 }
