@@ -3,13 +3,13 @@ Define the Car constructor to initialize these values (in that order). Include g
 
 
 public class Car {
-     String color;
-     String brand;
-     String model;
-     Double weight;
-     Double height;
-     Double length;
-     int productionYear;
+    private String color;
+    private String brand;
+    private String model;
+    private Double weight;
+    private Double height;
+    private Double length;
+    private int productionYear;
      
      public Car(String color,String brand,String model,Double weight,Double height,Double length,int productionYear){
     	 this.color = color;
