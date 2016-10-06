@@ -42,8 +42,8 @@ public class pascalTest {
 	@Test
 	public void test() {
 		pascal test = new pascal();
-		int[][] res = {{1},{1,1},{1,2,1}};
-		Assert.assertArrayEquals(test.generate(3),res);
+		int[][] res = {{1,0,0,0},{1,1,0,0},{1,2,1,0},{1,3,3,1}};
+		Assert.assertArrayEquals(test.generate(4),res);
 		
 	}
 
