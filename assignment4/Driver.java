@@ -5,7 +5,7 @@
 public class Driver {
        private String name;
        private int licenseNo;
-       private Double gasamount;
+       private double gasamount;
        private int age;
        
        public Driver(String name,int licenseNo,int age){
@@ -23,7 +23,7 @@ public class Driver {
     	   System.out.println("navigating to the destination");
        }
        
-       public void addGas(Double addvol){
+       public void addGas(double addvol){
     	   GasTank tank = new GasTank();
     	   tank.addGas(addvol);;
        }
