@@ -66,7 +66,7 @@ public int twoSum(int[] nums, int target) {
              if(hm.containsKey(nums[i])){
                     count++;
               }
-            hm.put(nums[i] - target,i);
+            hm.put(target - nums[i],i);
         }
        return count;
 }
