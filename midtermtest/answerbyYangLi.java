@@ -1,4 +1,4 @@
-1.Longest Palindrome
+/*1.Longest Palindrome*/
 public class Palindrome {
     public int longestPalindrome(String s) {
         if(s == null || s.length() == 0){
@@ -21,7 +21,7 @@ public class Palindrome {
     }
 }
 
-2.stock profit
+/*2.stock profit*/
 public class stockprofit {
     public int maxProfit(int[] prices) {
         if(prices == null || prices.length ==0){
@@ -38,7 +38,7 @@ public class stockprofit {
 }
 
 
-3.colum title to number
+/*3.colum title to number*/
 public class titiletonumber {
     public int titleToNumber(String s) {
         if(s == null || s.length() == 0){
@@ -54,7 +54,7 @@ public class titiletonumber {
     }
 }
 
-4.two sum
+/*4.two sum*/
 public class twoSum{
 public int twoSum(int[] nums, int target) {
        if(nums == null || nums.length == 0){
