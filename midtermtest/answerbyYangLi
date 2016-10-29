@@ -1,5 +1,5 @@
 1.Longest Palindrome
-public class Solution {
+public class Palindrome {
     public int longestPalindrome(String s) {
         if(s == null || s.length() == 0){
              return 0;
@@ -22,7 +22,7 @@ public class Solution {
 }
 
 2.stock profit
-public class Solution {
+public class stockprofit {
     public int maxProfit(int[] prices) {
         if(prices == null || prices.length ==0){
             return 0;
@@ -39,7 +39,7 @@ public class Solution {
 
 
 3.colum title to number
-public class Solution {
+public class titiletonumber {
     public int titleToNumber(String s) {
         if(s == null || s.length() == 0){
             return 0;
@@ -55,7 +55,7 @@ public class Solution {
 }
 
 4.two sum
-public class Solution{
+public class twoSum{
 public int twoSum(int[] nums, int target) {
        if(nums == null || nums.length == 0){
                     return 0;
