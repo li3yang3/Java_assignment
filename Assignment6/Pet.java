@@ -43,14 +43,7 @@ public class Pet {
 			s += "Sex: " + this.getSex() + "\n";
 			return s;
 		}
-		
-		public static void main(String args[]){
-			Pet a = new Pet("asdf","asdf","asdf");
-			a.setSex(3);
-			System.out.println(a.getSex());
-			
-		}
-
+	
 		
 		
 }
